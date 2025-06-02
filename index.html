@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Foody Moody - Food Delivery</title> <!-- "Foody Moody" is a brand name -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-sA+e2H1kP0p+v+gk+6Q5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q="
+      crossorigin=""/>
+    <script src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-o9N1j7k+v+gk+6Q5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q="
+      crossorigin=""></script>
+</head>
+<body>
+<header>Foody Moody </header> <!-- "Foody Moody" is a brand name -->
+<main>
+    <button id="top-back-btn" type="button" class="back-button" style="display:none;">Back</button>
+    <!-- Step 1: Select Restaurant -->
+    <div id="step-1" class="step active">
+        <h2>Select Restaurant</h2>
+        <div id="search-bar">
+            <input type="search" id="search-input" placeholder="Search restaurants..." aria-label="Search restaurants" />
+        </div>
+        <button id="next-btn-1" type="button" disabled>Next &#8594;</button>
+        <section id="restaurants" aria-label="Restaurants List"></section>
+    </div>
+
+    <!-- Step 2: Select Food -->
+    <div id="step-2" class="step">
+        <button id="back-btn-2" type="button" class="back-button">Back</button>
+        <h2>Select Food</h2>
+        <section id="menu" aria-label="Menu Items">
+            <div id="menu-list"></div>
+        </section>
+        <button id="next-btn-2" type="button" disabled> Next</button>
+    </div>
+
+    <!-- Step 3: Enter Address and Payment -->
+    <div id="step-3" class="step">
+        <button id="back-btn-3" type="button" class="back-button">Back</button>
+        <h2>Enter Address and Payment</h2>
+        <form id="address-form">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" required />
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" required />
+            <label for="address">Address</label>
+            <input type="text" id="address" required />
+            <label for="city">City</label>
+            <input type="text" id="city" required />
+            <label for="postal-code">Postal Code</label>
+            <input type="text" id="postal-code" required />
+            <label for="payment-mode">Select Payment Mode:</label>
+            <select id="payment-mode">
+                <option value="cod" selected>Cash on Delivery</option>
+                <option value="online">Online Payment</option>
+            </select>
+        </form>
+        <button id="confirm-btn" type="button">Confirm Order</button>
+        <button id="next-btn-3" type="button" disabled>Next</button>
+    </div>
+
+    <!-- Step 4: Order Confirmation -->
+    <div id="step-4" class="step">
+        <button id="back-btn-4" type="button" class="back-button">Back to Restaurants</button>
+        <h2>Order Confirmation</h2>
+        <div id="confirmation-message"></div>
+        <button id="view-order-history-btn" type="button">View Order Tracking and History</button>
+    </div>
+
+    <!-- Step 5: Order History and Tracking -->
+    <div id="step-5" class="step">
+        <button id="back-btn-5" type="button" class="back-button">Back to Order Confirmation</button>
+        <h2>Order History and Tracking</h2>
+        <div id="order-history"></div>
+    </div>
+
+    <!-- Mood Detection Section -->
+    <div id="mood-detection" class="mood-detection">
+        <h2>Mood Detection</h2>
+        <video id="video" width="320" height="240" autoplay muted></video>
+        <p id="mood-result">Click the button to start mood detection.</p>
+        <button id="start-mood-btn" type="button">Start Mood Detection</button>
+        <div id="suggestions"></div>
+    </div>
+    <button id="bottom-next-btn" type="button" class="bottom-next-button" aria-label="Next">Next &#8594;</button>
+</main>
+<footer>© 2024 Foody Moody Demo</footer> <!-- "Foody Moody" is a brand name -->
+
+<script src="script.js"></script>
+</body>
+</html>
