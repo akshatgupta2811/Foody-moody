@@ -10,7 +10,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-}
+} /*by Akshat Gupta */
 header {
     background-color: #ff3f6c;
     padding: 1rem 2rem;
@@ -29,7 +29,7 @@ main {
     max-width: 1300px;
     margin: 1rem auto 2rem;
     padding: 0 1rem;
-}
+} /*by Akshat Gupta */
 .step {
     display: none;
     padding: 1.5rem;
@@ -49,7 +49,7 @@ h2 {
     margin: 1rem 0;
     display: flex;
     justify-content: center;
-}
+} /*by Akshat Gupta */
 
 #search-bar input {
     width: 100%;
@@ -81,7 +81,7 @@ h2 {
 .restaurant-item:hover {
     background: #ffd6e0;
     box-shadow: 0 2px 8px rgba(234, 57, 77, 0.35);
-}
+} /*by Akshat Gupta */
 #menu {
     margin-bottom: 1rem;
 }
@@ -104,7 +104,7 @@ h2 {
 .menu-info {
     flex: 1;
     padding-left: 1rem;
-}
+} /*by Akshat Gupta */
 .menu-name {
     font-weight: 700;
     font-size: 1.2rem;
@@ -149,7 +149,7 @@ button#next-btn-3 {
     position: relative;
     top: auto;
     left: auto;
-}
+} /*by Akshat Gupta */
 button#next-btn-1:hover,
 button#next-btn-2:hover,
 button#next-btn-3:hover {
@@ -192,7 +192,7 @@ button:hover {
     display: block;
     margin-bottom: 0.3rem;
     color: #ea1e4d;
-}
+} /*by Akshat Gupta */
 #address-form input {
     width: 100%;
     padding: 0.5rem 0.8rem;
@@ -234,7 +234,7 @@ button:hover {
 #mood-result {
     font-weight: bold;
     margin-bottom: 10px;
-}
+} /*by Akshat Gupta */
 
 #start-mood-btn {
     background-color: #007bff;
@@ -261,4 +261,4 @@ button:hover {
     list-style-type: disc;
     padding-left: 20px;
     text-align: left;
-}
+} /*by Akshat Gupta */
