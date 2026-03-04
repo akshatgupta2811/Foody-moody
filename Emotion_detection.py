@@ -3,7 +3,7 @@ from emotion_detector import EmotionDetector
 import pathlib
 import os
 
-# Change directory to script location
+# Change directory to script location # By Akshat Gupta
 cascade_path = pathlib.Path(__file__).parent.absolute()
 print(f"cascade_path: {cascade_path}")
 os.chdir(cascade_path)
@@ -11,7 +11,7 @@ os.chdir(cascade_path)
 # Initialize emotion detector
 detector = EmotionDetector()
 
-# Sample restaurant food data separated into veg and non-veg
+# Sample restaurant food data separated into veg and non-veg # By Akshat Gupta
 restaurants = {
     "Restaurant A": {
         "veg": ["Paneer Butter Masala", "Dal Tadka", "Veg Biryani"],
@@ -34,7 +34,7 @@ for foods in restaurants.values():
     all_veg_food.extend(foods["veg"])
     all_non_veg_food.extend(foods["non_veg"])
 
-# Define the webcam
+# Define the webcam # By Akshat Gupta
 cap = cv2.VideoCapture(0)
 
 while True:
@@ -49,7 +49,7 @@ while True:
     # Detect faces
     faces = detector.detect_faces(gray)
 
-    # For each face detected, predict the emotion
+    # For each face detected, predict the emotion # By Akshat Gupta
     for (x, y, w, h) in faces:
         roi_gray = gray[y:y+h, x:x+w]
 
@@ -60,7 +60,7 @@ while True:
         cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
         cv2.putText(frame, label, (x, y-10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0, 255, 0), 2)
 
-        # Prepare food preference text
+        # Prepare food preference text # By Akshat Gupta
         veg_food = []
         non_veg_food = []
 
@@ -68,20 +68,21 @@ while True:
         veg_food.append("Veg Food: " + ", ".join(all_veg_food))
         non_veg_food.append("Non-Veg Food: " + ", ".join(all_non_veg_food))
 
-        # Display food preferences on the frame
+        # Display food preferences on the frame # By Akshat Gupta
         y0 = y + h + 20
         for i, text in enumerate(veg_food):
             cv2.putText(frame, text, (x, y0 + i*20), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 1)
         for i, text in enumerate(non_veg_food):
             cv2.putText(frame, text, (x, y0 + (len(veg_food) + i)*20), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 1)
 
-    # Display the resulting video
+    # Display the resulting video # By Akshat Gupta
     cv2.imshow('Emotion Detection with Food Preferences', frame)
 
     # Quit the program when 'q' is pressed
     if cv2.waitKey(1) & 0xFF == ord('q'):
-        break
+        break 
 
 # Release the webcam and close the window
 cap.release()
 cv2.destroyAllWindows()
+# By Akshat Gupta
