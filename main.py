@@ -3,7 +3,7 @@ import sys
 
 def run_cam():
     import cam
-    # cam.py runs its main loop on import
+    # cam.py runs its main loop on import # By Akshat Gupta
 
 def run_emotion_detection():
     import Emotion_detection
@@ -29,3 +29,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    # By Akshat Gupta
