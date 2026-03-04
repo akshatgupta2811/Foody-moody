@@ -16,7 +16,7 @@ const restaurants = [
             {id: 'item109', name: 'Paneer Tikka', price: 10, image: 'https://spiceupthecurry.com/wp-content/uploads/2020/09/paneer-tikka-recipe-2.jpg'},
             {id: 'item110', name: 'Roti', price: 2, image: 'https://www.cookwithmanali.com/wp-content/uploads/2021/07/Tandoori-Roti.jpg'}
         ]
-    },
+    },     // By Akshat Gupta
     {
         id: 'rest2',
         name: "Mama Mia's Pizzeria",
@@ -52,7 +52,7 @@ const restaurants = [
             {id: 'item309', name: 'Tonkatsu', price: 12, image: 'https://sudachirecipes.com/wp-content/uploads/2020/02/tonkatsu-thumbnail.jpg'},
             {id: 'item310', name: 'Green Tea Ice Cream', price: 6, image: 'https://tse1.mm.bing.net/th/id/OIP.NNaIPSfdElDFF1nonv7UegAAAA?rs=1&pid=ImgDetMain'}
         ]
-    },
+    },      // By Akshat Gupta
     {
         id: 'rest4',
         name: 'Burger Haven',
@@ -88,7 +88,7 @@ const restaurants = [
             {id: 'item509', name: 'Salsa', price: 3, image: 'https://tse2.mm.bing.net/th/id/OIP.YwKWO2AjjISnJHjXPeT0iQAAAA?rs=1&pid=ImgDetMain'},
             {id: 'item510', name: 'Flan', price: 5, image: 'https://dirtydishesmessykisses.com/wp-content/uploads/2024/09/flan-recipe-1727346308.jpg'}
         ]
-    },
+    },             // By Akshat Gupta
     {
         id: 'rest6',
         name: 'Curry House',
@@ -106,8 +106,8 @@ const restaurants = [
             {id: 'item609', name: 'Samosa', price: 4, image: 'https://tse1.explicit.bing.net/th/id/OIP.oljQ9w3KCBVEiq007vJStQHaHa?rs=1&pid=ImgDetMain'},
             {id: 'item610', name: 'Gulab Jamun', price: 5, image: 'https://tse1.explicit.bing.net/th/id/OIP.KeI2UV4X01HLASoBWij6lQHaK2?rs=1&pid=ImgDetMain'}
         ]
-    },
-    {
+    },              // By Akshat Gupta
+    { 
         id: 'rest7',
         name: 'Pasta Palace',
         cuisine: 'Italian, Pasta',
@@ -142,7 +142,7 @@ const restaurants = [
             {id: 'item809', name: 'Tonkatsu', price: 12, image: 'https://tse2.mm.bing.net/th/id/OIP.LVY58Q5HlocT6oiN536R4gHaE8?rs=1&pid=ImgDetMain'},
             {id: 'item810', name: 'Green Tea Ice Cream', price: 6, image: 'https://tse2.mm.bing.net/th/id/OIP.eGCLOZcq4sKt7G29zGQ2FgHaLH?rs=1&pid=ImgDetMain'}
         ]
-    },
+    },        // By Akshat Gupta
     {
         id: 'rest9',
         name: 'Burger Joint',
@@ -178,7 +178,7 @@ const restaurants = [
             {id: 'item1009', name: 'Salsa', price: 3, image: 'https://www.thechunkychef.com/wp-content/uploads/2022/09/Incredible-Homemade-Salsa-Recipe-recipe-card.jpg'},
             {id: 'item1010', name: 'Flan', price: 5, image: 'https://natashaskitchen.com/wp-content/uploads/2023/04/Flan-Recipe-SQ.jpg'}
         ]
-    }
+    }                          // By Akshat Gupta
 ]
 const restaurantList = document.getElementById('restaurants');
 const menuList = document.getElementById('menu-list');
@@ -222,7 +222,7 @@ backBtn5.addEventListener('click', () => {
     backBtn4.disabled = true;
     backBtn5.disabled = true;
     topBackBtn.style.display = 'none';
-});
+});                        // By Akshat Gupta
 
 // Array to store order history
 let orderHistory = [];
@@ -272,7 +272,7 @@ function simulateLiveLocation(orderId) {
             delete locationIntervals[orderId];
         }
     }, 3000);
-}
+}               // By Akshat Gupta
 
 // Function to display order history and tracking
 function displayOrderHistory() {
@@ -302,7 +302,7 @@ function displayOrderHistory() {
         simulateOrderStatus(index);
         simulateLiveLocation(index);
     });
-}
+}                                 // By Akshat Gupta
 let selectedRestaurant = null;
 let selectedMenuItems = [];
 let selectedMenuItem = null;
@@ -352,7 +352,7 @@ function displayRestaurants() {
             selectedRestaurantImage = restaurant.image;
             nextBtn1.disabled = false;
             handleNextStep1();
-        });
+        });                           // By Akshat Gupta
         restaurantList.appendChild(restaurantItem);
     });
 }
@@ -382,7 +382,7 @@ function displayMenuItems() {
         });
         menuList.appendChild(menuItem);
     });
-}
+}                         // By Akshat Gupta
 // Function to handle search
 function handleSearch() {
     const searchTerm = searchInput.value.toLowerCase();
@@ -407,7 +407,7 @@ function handleSearch() {
             selectedRestaurantImage = restaurant.image;
             nextBtn1.disabled = false;
             handleNextStep1();
-        });
+        });                          // By Akshat Gupta
         restaurantList.appendChild(restaurantItem);
     });
 }
@@ -439,7 +439,7 @@ function handleBackStep2() {
     backBtn3.disabled = true; // Disable back button on step 3 when going back to step 1
     backBtn4.disabled = true; // Disable back button on step 4 when going back to step 1
     topBackBtn.style.display = 'none'; // Hide top back button on step 1
-}
+}                     // By Akshat Gupta
 
 function handleBackStep3() {
     steps.step3.classList.remove('active');
@@ -470,7 +470,7 @@ function handleConfirm() {
     const paymentMode = document.getElementById('payment-mode').value;
 
     if (name && phone && address && city && postalCode) {
-        steps.step3.classList.remove('active');
+        steps.step3.classList.remove('active');                   // By Akshat Gupta
         steps.step4.classList.add('active');
 
         // Calculate total price
@@ -530,7 +530,7 @@ topBackBtn.addEventListener('click', () => {
         handleBackStep3();
     } else if (steps.step4.classList.contains('active')) {
         handleBackStep4();
-    }
+    }                // By Akshat Gupta
 });
 
 bottomNextBtn.addEventListener('click', () => {
@@ -582,7 +582,7 @@ function updateTopBackAndBottomNextButtons() {
         backBtn3.disabled = true;
         backBtn4.disabled = true;
     }
-}
+}                // By Akshat Gupta
 
 // Update buttons visibility on step changes
 const originalHandleNextStep1 = handleNextStep1;
@@ -608,7 +608,7 @@ handleBackStep3 = function() {
     originalHandleBackStep3();
     updateTopBackAndBottomNextButtons();
 };
-
+                  // By Akshat Gupta
 const originalHandleBackStep4 = handleBackStep4;
 handleBackStep4 = function() {
     originalHandleBackStep4();
@@ -654,7 +654,7 @@ function updateCartDisplay() {
                 cart.splice(idx, 1);
                 updateCartDisplay();
             }
-        });
+        });                  // By Akshat Gupta
     });
     nextBtn2.disabled = false;
 }
@@ -708,7 +708,7 @@ const moodToFoodMap = {
         veg: ['Salad', 'Grilled Vegetables', 'Pasta'],
         non_veg: ['Grilled Chicken', 'Roast Beef', 'Fish and Chips']
     }
-};
+};                 // By Akshat Gupta
 
 const moodFoodBenefits = {
     happy: {
@@ -771,7 +771,7 @@ const moodFoodBenefits = {
             'Fish and Chips': 'Omega-3 fatty acids support brain function.'
         }
     }
-};
+};                  // By Akshat Gupta
 
 async function startMoodDetection() {
     try {
@@ -813,7 +813,7 @@ async function startMoodDetection() {
         }, 1000);
     });
 }
-
+       // By Akshat Gupta
 function showSuggestions(mood) {
     const foods = moodToFoodMap[mood] || moodToFoodMap['neutral'];
     const benefits = moodFoodBenefits[mood] || moodFoodBenefits['neutral'];
@@ -834,3 +834,4 @@ startMoodBtn.addEventListener('click', () => {
     startMoodDetection();
     startMoodBtn.disabled = true;
 });
+    // By Akshat Gupta
