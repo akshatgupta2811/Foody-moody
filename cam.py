@@ -5,7 +5,7 @@ from emotion_detector import EmotionDetector
 import pathlib
 import os
 
-# Change directory to script location
+# Change directory to script location # By Akshat Gupta
 cascade_path = pathlib.Path(__file__).parent.absolute()
 os.chdir(cascade_path)
 
@@ -13,7 +13,7 @@ os.chdir(cascade_path)
 emotion_file_path = os.path.join(cascade_path, "emotions.txt")
 print(f"Emotion file will be saved at: {emotion_file_path}")
 
-# Initialize emotion detector
+# Initialize emotion detector # By Akshat Gupta
 detector = EmotionDetector()
 
 # Define the webcam
@@ -27,7 +27,7 @@ detected_emotions = []
 while time.time() - start_time < time_frame:
     ret, frame = cap.read()
     if not ret:
-        break  # Stop if webcam feed is not available
+        break  # Stop if webcam feed is not available # By Akshat Gupta
 
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
@@ -43,7 +43,7 @@ while time.time() - start_time < time_frame:
         # Store detected emotion in list
         detected_emotions.append(predicted_emotion)
 
-        # Draw bounding box and display the emotion
+        # Draw bounding box and display the emotion # By Akshat Gupta
         cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
         cv2.putText(frame, predicted_emotion, (x, y-10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0, 255, 0), 2)
 
@@ -59,7 +59,7 @@ if detected_emotions:
     most_common_emotion = Counter(detected_emotions).most_common(1)[0][0]
 
     # Save to file
-    with open(emotion_file_path, "w") as f:  # "w" ensures it writes only once, no duplicates
+    with open(emotion_file_path, "w") as f:  # "w" ensures it writes only once, no duplicates # By Akshat Gupta
         f.write(most_common_emotion + "\n")
 
     print(f"Stored emotion: {most_common_emotion}")
@@ -67,3 +67,4 @@ if detected_emotions:
 # Release webcam and close window
 cap.release()
 cv2.destroyAllWindows()
+ # By Akshat Gupta
